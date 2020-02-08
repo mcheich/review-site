@@ -2,6 +2,8 @@ package com.example.reviewsite;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.Collection;
+
 import org.junit.jupiter.api.Test;
 
 class ReviewRepositoryTest {
@@ -125,26 +127,14 @@ class ReviewRepositoryTest {
 		//Assert
 		assertEquals(expected, actual);		
 	}
-	
+
 	@Test
 	void shouldReturn3() {
 		// Arrange
 		ReviewRepository reviewRepo = new ReviewRepository();
 		//Act 
 		reviewRepo.loadReviews();
-		int actual = reviewRepo.getReviews();
-		int expected = 3;
-		//Assert
-		assertEquals(expected, actual);		
-	}
-
-	@Test
-	void shouldContainTitleOneTwoAndThree() {
-		// Arrange
-		ReviewRepository reviewRepo = new ReviewRepository();
-		//Act 
-		reviewRepo.loadReviews();
-		int actual = reviewRepo.getReviews();
+		int actual = reviewRepo.getReviews().size();
 		int expected = 3;
 		//Assert
 		assertEquals(expected, actual);		

@@ -2,11 +2,16 @@ package com.example.reviewsite;
 
 public class Review {
 
+	private long id;
 	private String title;
 	private String imageUrl;
 	private String category;
 	private String content;
 	private String author;
+	
+	public long getId() {
+		return id;
+	}
 
 	public String getTitle() {
 		return title;
@@ -28,13 +33,15 @@ public class Review {
 		return this.author;
 	}
 	
-	public Review(String title, String urlImage, String category, String content, String author) {
+	public Review(int id, String title, String urlImage, String category, String content, String author) {
+		this.id = id;
 		this.title = title;
 		this.imageUrl = urlImage;
 		this.category = category;
 		this.content = content;
 		this.author = author;
 	}
+
 
 
 }
