@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,19 @@
 </head>
 
 <body>
-    <h1>Reviews</h1>
+    <header>
+        <h1>A list of All Book Reviews</h1>
+    </header>
+
+    <main>
+        <ul>
+            <li th:each="review: ${reviews}"><a th:href="|/reviews/${review.id}|" th:text="${review.title}"></a>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        <small>&copy MJC 2020</small>
+    </footer>
 </body>
 
 </html>

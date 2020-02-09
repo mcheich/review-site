@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,24 @@
 </head>
 
 <body>
-    <h1>A Review</h1>
+    <header>
+        <h1 th:inline="text">
+            [[${review.title}]]
+        </h1>
+        <h2 th:text="'by ' + ${review.author}"></h2>
+
+    </header>
+
+    <main>
+        <h3 th:text="'Category: ' + ${review.category}"></h3>
+
+        <h3>Book Review:</h3>
+        <p th:text="${review.content}"></p>
+
+        <img th:src="@{review.url}" />
+
+        <h3><a href="/reviews">Back to all reviews page.</a></h3>
+    </main>
 </body>
 
 </html>

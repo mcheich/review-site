@@ -33,7 +33,7 @@ public class Review {
 		return this.author;
 	}
 	
-	public Review(int id, String title, String urlImage, String category, String content, String author) {
+	public Review(long id, String title, String urlImage, String category, String content, String author) {
 		this.id = id;
 		this.title = title;
 		this.imageUrl = urlImage;

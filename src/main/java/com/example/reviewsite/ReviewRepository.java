@@ -11,9 +11,9 @@ public class ReviewRepository {
 
 	private Map<Long, Review> reviewList = new HashMap<Long, Review>();
 	
-	Review reviewOne = new Review(1, "War and Peace", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Guerraepace.jpg/367px-Guerraepace.jpg", "novel", "A wonderful book with lots of characters.", "Leo Tolstoy");
-	Review reviewTwo = new Review(2, "Crime and Punishment", "https://en.wikipedia.org/wiki/Crime_and_Punishment#/media/File:Crimeandpunishmentcover.png", "novel", "A book about sanity, and lack there of.", "Fyodor Dostoevsky");
-	Review reviewThree = new Review(3, "The Idiot", "https://en.wikipedia.org/wiki/The_Idiot#/media/File:The_Idiot_(book_cover).jpg", "novel", "A book about kindness.", "Fyodor Dostoevsky");
+	Review reviewOne = new Review(1L, "War and Peace", "https://upload.wikimedia.org/wikipedia/commons/a/af/Tolstoy_-_War_and_Peace_-_first_edition%2C_1869.jpg", "novel", "A wonderful book with lots of characters.", "Leo Tolstoy");
+	Review reviewTwo = new Review(2L, "Crime and Punishment", "/images/crimeAndPunishment.png", "novel", "A book about sanity, and lack there of.", "Fyodor Dostoevsky");
+	Review reviewThree = new Review(3L, "The Idiot", "/images/theIdiot.jpg", "novel", "A book about kindness.", "Fyodor Dostoevsky");
 	
 	public ReviewRepository() {
 		this.reviewList.put(reviewOne.getId(), reviewOne);
