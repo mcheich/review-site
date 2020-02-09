@@ -42,6 +42,4 @@ public class Review {
 		this.author = author;
 	}
 
-
-
 }
