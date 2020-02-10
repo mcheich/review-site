@@ -23,7 +23,7 @@
         <h3>Book Review:</h3>
         <p th:text="${review.content}"></p>
 
-        <img th:src="@{review.url}" />
+        <img th:src="${review.imageUrl}" />
 
         <h3><a href="/reviews">Back to all reviews page.</a></h3>
     </main>
